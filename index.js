@@ -4,5 +4,9 @@ console.log("on new-branch")
 const newFeature = () => {
     let variant = "v1";
 
-    return variant === "control" ? <div>Control</div> : <div>v1</div>;
+    const handleClick = () => {
+        console.log("tracking button click");
+    }
+
+    return variant === "control" ? <div onclick={handleClick}>Control</div> : <div onclick={handleClick}>v1</div>;
 }
